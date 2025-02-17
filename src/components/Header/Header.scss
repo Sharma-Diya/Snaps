@@ -1,0 +1,64 @@
+@use "/src/styles/partials/variables" as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 16px;
+
+  &-filter {
+    // Styles for the filter (if any)
+  }
+
+  &-btn {
+    font-family: "Outfit-light";
+    color: $icons-color;
+    background-color: $background-color;
+    display: flex;
+    align-items: center;
+    border: 2px solid $icons-color;
+    border-radius: 20px;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: $icons-color;
+      color: $alt-text-color;
+
+      .filter-icon path {
+        fill: $alt-text-color; // Ensure color change on hover
+      }
+    }
+
+    &--selected {
+      background-color: $icons-color;
+      color: $alt-text-color;
+      
+      // Optional: Add hover effect for selected state if needed
+      &:hover {
+        background-color: $icons-color;
+        color: $alt-text-color;
+  
+        .filter-icon path {
+          fill: $alt-text-color; // Ensure color change on hover
+        }
+      }
+      .filter-icon path {
+        fill: $alt-text-color; // Ensure color change on hover
+      }
+    }
+  }
+}
+
+.filter-icon {
+  width: 13px;
+  height: 9px;
+  padding: 2px;
+  fill: $icons-color;
+
+  // You do not need hover here if handled by the parent button
+  // &:hover {
+  //   path {
+  //     fill: $alt-text-color;
+  //   }
+  // }
+}
