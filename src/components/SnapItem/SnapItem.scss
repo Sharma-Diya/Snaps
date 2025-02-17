@@ -1,0 +1,64 @@
+@use "/src/styles/partials/variables" as *;
+@use "/src/styles/partials/mixins" as *;
+@use "/src/styles/partials/fonts" as *; 
+
+.photo-card {
+    background: $alt-background-color; // Light greenish background
+    border-radius: 12px;
+    padding-bottom: 10px;
+    border: 1px solid $border-color; 
+    overflow: hidden;
+    max-width: 400px;
+    margin: 20px auto;
+    position: relative;
+  
+    &__photo {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      display: block;
+    }
+  
+    &__photographer {
+      position: absolute;
+      bottom: 3.2rem;
+      right: 2rem;
+      background: $alt-background-color;
+      border-top-left-radius: 8px;
+      padding: 6px 10px;
+      font-weight: bold;
+      font-size: 14px;
+      white-space: nowrap;
+      transform: translateX(2.2rem);
+    }
+  
+    &__tags {
+      list-style: none;
+      padding-left: 10px;
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      // gap: 6px;
+    }
+  
+    &__tag-item {
+      background: white;
+      border: 1px solid $border-color; 
+      padding: 6px 8px;
+      margin: 2px 6px;
+      font-size: 12px;
+      border-radius: 10px;
+      font-weight: 500;
+      border: 2px solid $border-color; 
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+  
+      &:hover {
+        background: #dceee1;
+        border-color: #a5c9a8;
+      }
+    }
+  }
+  
