@@ -1,24 +1,45 @@
 @use "/src/styles/partials/variables" as *;
-
+@use "/src/styles/partials/mixins" as *;
+@use "/src/styles/partials/fonts" as *;
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 16px;
+  padding: 1.25rem 1rem;
 
-  &-filter {
-    // Styles for the filter (if any)
+  &-logo {
+    font-size: 2rem;
+    line-height: 2.5rem;
+
+    @include tablet {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.filter-btn {
+  font-family: "Outfit-light";
+  color: $icons-color;
+  background-color: $background-color;
+  display: flex;
+  align-items: center;
+  border: 0.125rem solid $icons-color;
+  border-radius: 1.25rem;
+  padding: 0.5rem 1rem;
+  height: auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: $icons-color;
+    color: $alt-text-color;
+
+    .filter-icon path {
+      fill: $alt-text-color; // Ensure color change on hover
+    }
   }
 
-  &-btn {
-    font-family: "Outfit-light";
-    color: $icons-color;
-    background-color: $background-color;
-    display: flex;
-    align-items: center;
-    border: 2px solid $icons-color;
-    border-radius: 20px;
-    padding: 8px 16px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  &--selected {
+    background-color: $icons-color;
+    color: $alt-text-color;
 
     &:hover {
       background-color: $icons-color;
@@ -28,37 +49,15 @@
         fill: $alt-text-color; // Ensure color change on hover
       }
     }
-
-    &--selected {
-      background-color: $icons-color;
-      color: $alt-text-color;
-      
-      // Optional: Add hover effect for selected state if needed
-      &:hover {
-        background-color: $icons-color;
-        color: $alt-text-color;
-  
-        .filter-icon path {
-          fill: $alt-text-color; // Ensure color change on hover
-        }
-      }
-      .filter-icon path {
-        fill: $alt-text-color; // Ensure color change on hover
-      }
+    .filter-icon path {
+      fill: $alt-text-color; // Ensure color change on hover
     }
   }
 }
 
 .filter-icon {
-  width: 13px;
-  height: 9px;
-  padding: 2px;
+  width: 1.25rem;
+  height: 0.5625rem;
+  padding-left: 0.5rem;
   fill: $icons-color;
-
-  // You do not need hover here if handled by the parent button
-  // &:hover {
-  //   path {
-  //     fill: $alt-text-color;
-  //   }
-  // }
 }

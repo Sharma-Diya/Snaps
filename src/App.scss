@@ -1,6 +1,74 @@
-body, html{
-  background-color: #effaf7;
+@use "/src/styles/partials/variables" as *;
+@use "/src/styles/partials/mixins" as *;
+@use "/src/styles/partials/fonts" as *;
+
+* {
   padding: 0;
   margin: 0;
 }
 
+body,
+html {
+  background-color: $background-color;
+  padding: 0;
+  margin: 0;
+  font-family: "Outfit-Light", "Newsreader", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Newsreader", serif;
+  font-weight: 400;
+  color: $text-color;
+}
+
+.main {
+  padding: 1.5rem 1rem;
+
+  &__subheading {
+    padding: 0.625rem 0;
+    font-size: 1.125rem;
+    font-weight: 300;
+    @include tablet {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__para {
+    font-size: 1.625rem;
+    font-weight: normal;
+    font-family: "Newsreader-Light", "Newsreader", "Serif";
+    line-height: 2.375rem;
+    padding-bottom: 1.75rem;
+    @include tablet {
+      font-size: 2.5rem;
+      line-height: 4.125rem;
+    }
+    @include desktop {
+      font-size: 3.25rem;
+
+      width: 55.5%;
+    }
+
+    &-italic {
+      font-family: "Newsreader";
+      font-style: italic;
+      font-weight: 300;
+      color: $text-color;
+    }
+  }
+}
+
+.container {
+  display: grid;
+  &--open {
+    float: right;
+  }
+}
+.content {
+  @include desktop {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}

@@ -7,7 +7,7 @@ function header(props) {
       <div className="header-filter">
         <button
           onClick={props.handleDisplayTags}
-          className={`header-btn ${props.displayTags ? 'header-btn--selected' : ''}`} // Change class based on displayTags state
+          className={`filter-btn ${props.displayTags ? 'filter-btn--selected' : ''}`} // Change class based on displayTags state
           type="button"
         >
           Filters
