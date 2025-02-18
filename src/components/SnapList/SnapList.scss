@@ -1,18 +1,20 @@
 @use "/src/styles/partials/mixins" as *;
 
+.snap-list__info {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1.25rem;
 
-.snap-list__info{
-    padding:0;
-    list-style: none;
-    @include tablet{
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 3 columns with equal width */
-      gap: 20px; /* space between cards */
-      margin: 20px;
-      }
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    @include desktop{
-      grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
 
-    }  
+    .container--open & {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }
