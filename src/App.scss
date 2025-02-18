@@ -27,7 +27,7 @@ h3 {
   padding: 1.5rem 1rem;
 
   &__subheading {
-    padding: 0.625rem 0;
+    padding: 0.625rem 0 1.5rem 0;
     font-size: 1.125rem;
     font-weight: 300;
     @include tablet {

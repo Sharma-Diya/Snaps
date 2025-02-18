@@ -3,27 +3,27 @@ import "./Footer.scss";
 function Footer() {
   return (
     <footer className="footer">
-      <div className="footer__logo">
+      <div className="footer-logo">
         <h1>Snaps</h1>
       </div>
 
-      <div className="footer__info">
-        <div className="footer__desc">
+      <div className="footer-info">
+        <div className="footer-info__label">
           <h3>For photographers</h3>
           <h3>Hire talent</h3>
           <h3>Inspiration</h3>
         </div>
 
-        <div className="footer__content">
+        <div className="footer-info__content">
           <h3>About</h3>
           <h3>Careers</h3>
           <h3>Support</h3>
         </div>
       </div>
 
-      <div className="footer__icons">
+      <div className="footer-icons">
         <svg
-          className="footer__icons-fb"
+          className="footer-icons__fb"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -33,7 +33,7 @@ function Footer() {
           />
         </svg>
         <svg
-          className="footer__icons-twitter"
+          className="footer-icons__twitter"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -43,7 +43,7 @@ function Footer() {
           />
         </svg>
         <svg
-          className="footer__icons-insta"
+          className="footer-icons__insta"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -53,7 +53,7 @@ function Footer() {
           />
         </svg>
         <svg
-          className="footer__icons-pinterest"
+          className="footer-icons__pinterest"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -64,10 +64,9 @@ function Footer() {
         </svg>
       </div>
 
-      <div className="footer__bottom">
+      <div className="footer-bottom">
         <p>
-          {" "}
-          &copy;2024 Snaps · <a href="#">Terms</a> <a href="#">Privacy</a>{" "}
+          &copy;2024 Snaps · <a href="#">Terms</a> <a href="#">Privacy</a>
           <a href="#">Cookies</a>
         </p>
       </div>
