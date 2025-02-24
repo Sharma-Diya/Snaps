@@ -90,8 +90,6 @@
     }
 
     .filter-icon path {
-      fill: $alt-text-color; // Ensure color change on hover
-
     &--selected {
       background-color: $icons-color;
       color: $alt-text-color;
