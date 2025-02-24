@@ -36,8 +36,8 @@ function CommentsPage() {
 
   return (
     <div className="comment">
-      <h3 className="comment-count">{countDisplayedComments()} Comments</h3>
       <AddComments fetchComments={fetchComments} />
+      <h3 className="comment-count">{countDisplayedComments()} Comments</h3>
       <ul>
         {comments.map((comment) => (
           <li className="comment-list" key={comment.id}>
