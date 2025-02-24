@@ -1,0 +1,65 @@
+@use "/src/styles/partials/variables" as *;
+@use "/src/styles/partials/mixins" as *;
+
+
+.comment-form {
+  
+    &__container {
+
+      display: flex;
+      flex-direction: column;
+    margin: 1.25rem;
+    }
+  
+    &__label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 5px;
+    }
+  
+    &__input,
+    &__textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 2px solid $border-color; // Default State (Sea Green)
+
+      border-radius: 10px;
+      font-size: 14px;
+      background-color: #ffffff;
+      align-items: center;
+
+      &:focus {
+        border-color: $icons-color;
+        outline: none; // Removes default browser outline
+      }
+      
+      
+    }
+  
+    &__input.error,
+    &__textarea.error {
+      border-color: #b10606; //  Error State (Red)
+    }
+  
+  
+    &__textarea {
+      min-height: 100px;
+      resize: none;
+    }
+  
+    &__button {
+      background-color: $icons-color;
+      color: white;
+      padding: 10px 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 8rem;
+      display: block;
+      align-self: flex-end;
+      font-weight: 400;
+    }
+  }
+  
