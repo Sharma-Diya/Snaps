@@ -1,5 +1,6 @@
 import "./SnapItem.scss";
 import { Link } from "react-router-dom";
+
 function SnapItem({ snap }) {
   if (!snap) {
     return null;

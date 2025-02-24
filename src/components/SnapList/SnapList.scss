@@ -7,9 +7,9 @@
     padding: 0;
     list-style: none;
     display: flex;
-    flex-wrap: wrap; // Allows wrapping
+    flex-wrap: wrap; 
     gap: 1.25rem;
-    justify-content: center; //  Centers cards when fewer than max per row
+    justify-content: center; 
 
     .photo-card {
       width: 100%;

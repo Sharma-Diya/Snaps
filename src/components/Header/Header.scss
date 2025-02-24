@@ -17,8 +17,8 @@
     }
 
     &__link {
-      text-decoration: none; // Removes default underline
-      color: inherit; // Keeps the same text color
+      text-decoration: none;
+      color: inherit;
       font-weight: bold;
     }
   }
@@ -27,7 +27,7 @@
 .header-filter {
   display: flex;
   align-items: center;
-  gap: 1rem; // Ensures proper spacing
+  gap: 1rem;
 }
 
 .filter-btn {
@@ -47,7 +47,7 @@
     color: $alt-text-color;
 
     .filter-icon path {
-      fill: $alt-text-color; // Ensure color change on hover
+      fill: $alt-text-color;
     }
   }
 
@@ -68,28 +68,28 @@
   align-items: center;
   gap: 1rem;
 }
-  .filter-btn {
-    font-family: "Outfit-light";
-    color: $icons-color;
-    background-color: $background-color;
-    display: flex;
-    align-items: center;
-    border: 0.125rem solid $icons-color;
-    border-radius: 1.25rem;
-    padding: 0.5rem 1rem;
-    height: auto;
-    transition: background-color 0.3s ease, color 0.3s ease;
+.filter-btn {
+  font-family: "Outfit-light";
+  color: $icons-color;
+  background-color: $background-color;
+  display: flex;
+  align-items: center;
+  border: 0.125rem solid $icons-color;
+  border-radius: 1.25rem;
+  padding: 0.5rem 1rem;
+  height: auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
 
-    &:hover {
-      background-color: $icons-color;
-      color: $alt-text-color;
-
-      .filter-icon path {
-        fill: $alt-text-color;
-      }
-    }
+  &:hover {
+    background-color: $icons-color;
+    color: $alt-text-color;
 
     .filter-icon path {
+      fill: $alt-text-color;
+    }
+  }
+
+  .filter-icon path {
     &--selected {
       background-color: $icons-color;
       color: $alt-text-color;

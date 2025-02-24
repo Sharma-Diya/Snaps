@@ -7,7 +7,6 @@ const apiKey = "e0eea5f0-0f8c-4b54-9fc4-ff50843766d4";
 function FilterList({ selectedTag, handleTagClick }) {
   const [tags, setTags] = useState([]);
 
-  // Separate function for fetching tags
   const fetchTags = async () => {
     try {
       const response = await axios.get(
@@ -19,7 +18,6 @@ function FilterList({ selectedTag, handleTagClick }) {
     }
   };
 
-  // Call fetchTags inside useEffect
   useEffect(() => {
     fetchTags();
   }, []);

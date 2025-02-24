@@ -2,9 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import "./AddComments.scss";
-// import Comments from "../Comments/Comments";
 const apiKey = "e0eea5f0-0f8c-4b54-9fc4-ff50843766d4";
-
 
 function AddComments({ fetchComments }) {
   const { id } = useParams();
