@@ -1,0 +1,26 @@
+@use "/src/styles/partials/variables" as *;
+@use "/src/styles/partials/fonts" as *;
+
+.comment {
+  margin: 1.25rem;
+
+  &-count {
+    font-family: "Outfit-Light", sans-serif;
+    padding: 1rem 0;
+  }
+  &-list {
+    list-style: none;
+    border-top: 0.125rem solid $border-color;
+    padding: 1rem 0;
+  }
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    color: $icons-color;
+
+    p {
+      font-size: 0.75rem;
+      padding-bottom: 0.625rem;
+    }
+  }
+}

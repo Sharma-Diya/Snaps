@@ -1,22 +1,44 @@
 import "./FilterList.scss";
-import tagData from "../../data/tags.json";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
-function FilterList(props) {
+const apiKey = "e0eea5f0-0f8c-4b54-9fc4-ff50843766d4";
+
+function FilterList({ selectedTag, handleTagClick }) {
+  const [tags, setTags] = useState([]);
+
+  // Separate function for fetching tags
+  const fetchTags = async () => {
+    try {
+      const response = await axios.get(
+        `https://unit-3-project-c5faaab51857.herokuapp.com/tags?api_key=${apiKey}`
+      );
+      setTags(response.data || []);
+    } catch (error) {
+      console.error("Error fetching tags:", error);
+    }
+  };
+
+  // Call fetchTags inside useEffect
+  useEffect(() => {
+    fetchTags();
+  }, []);
+
   return (
     <section className="filter">
       <p>Filters</p>
       <ul className="filter-list">
-        {tagData.map((tag, index) => {
-          const highlight = tag === props.selectedTag;
+        {tags.map((tag, index) => {
+          const highlight = tag === selectedTag;
           return (
             <li
-              onClick={() => {
-                props.handleTagClick(tag);
-              }}
+              onClick={() => handleTagClick(tag)}
               key={index}
+              role="button"
+              aria-selected={highlight}
               className={`filter-list__item ${
-                highlight === true ? "filter-list__item--selected" : null
-              } `}
+                highlight ? "filter-list__item--selected" : ""
+              }`}
             >
               {tag}
             </li>
@@ -26,4 +48,5 @@ function FilterList(props) {
     </section>
   );
 }
+
 export default FilterList;

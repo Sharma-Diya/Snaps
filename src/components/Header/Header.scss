@@ -41,6 +41,31 @@
     background-color: $icons-color;
     color: $alt-text-color;
 
+    &__link {
+      text-decoration: none;
+      color: inherit;
+      font-weight: bold;
+    }
+  }
+}
+
+.header-filter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .filter-btn {
+    font-family: "Outfit-light";
+    color: $icons-color;
+    background-color: $background-color;
+    display: flex;
+    align-items: center;
+    border: 0.125rem solid $icons-color;
+    border-radius: 1.25rem;
+    padding: 0.5rem 1rem;
+    height: auto;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
     &:hover {
       background-color: $icons-color;
       color: $alt-text-color;
@@ -51,6 +76,23 @@
     }
     .filter-icon path {
       fill: $alt-text-color; // Ensure color change on hover
+
+    &--selected {
+      background-color: $icons-color;
+      color: $alt-text-color;
+
+      &:hover {
+        background-color: $icons-color;
+        color: $alt-text-color;
+
+        .filter-icon path {
+          fill: $alt-text-color;
+        }
+      }
+
+      .filter-icon path {
+        fill: $alt-text-color;
+      }
     }
   }
 }
@@ -60,4 +102,5 @@
   height: 0.5625rem;
   padding-left: 0.5rem;
   fill: $icons-color;
+}
 }
