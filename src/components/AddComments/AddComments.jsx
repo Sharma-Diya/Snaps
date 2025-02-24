@@ -34,6 +34,8 @@ function AddComments({ fetchComments }) {
       fetchComments();
       setCommentName("");
       setCommentDescription("");
+
+      console.log("Comment added:", response.data);
     } catch (error) {
       console.error("Error adding comment:", error);
     }

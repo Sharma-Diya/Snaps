@@ -24,8 +24,11 @@ h3 {
 }
 
 .main {
-  padding: 1.5rem 1rem;
+  margin: 1.25rem;
 
+  &__heading {
+    margin: 0.25rem;
+  }
   &__subheading {
     padding: 0.625rem 0 1.5rem 0;
     font-size: 1.125rem;

@@ -1,10 +1,12 @@
 @use "/src/styles/partials/variables" as *;
 @use "/src/styles/partials/mixins" as *;
 @use "/src/styles/partials/fonts" as *;
+
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 1.25rem 1rem;
+  align-items: center;
+  padding: 1.75rem 1rem;
 
   &-logo {
     font-size: 2rem;
@@ -13,7 +15,19 @@
     @include tablet {
       font-size: 2.5rem;
     }
+
+    &__link {
+      text-decoration: none; // Removes default underline
+      color: inherit; // Keeps the same text color
+      font-weight: bold;
+    }
   }
+}
+
+.header-filter {
+  display: flex;
+  align-items: center;
+  gap: 1rem; // Ensures proper spacing
 }
 
 .filter-btn {
@@ -53,7 +67,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-
+}
   .filter-btn {
     font-family: "Outfit-light";
     color: $icons-color;
@@ -71,9 +85,10 @@
       color: $alt-text-color;
 
       .filter-icon path {
-        fill: $alt-text-color; // Ensure color change on hover
+        fill: $alt-text-color;
       }
     }
+
     .filter-icon path {
       fill: $alt-text-color; // Ensure color change on hover
 
@@ -89,10 +104,6 @@
           fill: $alt-text-color;
         }
       }
-
-      .filter-icon path {
-        fill: $alt-text-color;
-      }
     }
   }
 }
@@ -103,4 +114,17 @@
   padding-left: 0.5rem;
   fill: $icons-color;
 }
+
+.home-btn {
+  font-family: "Outfit-light";
+  color: $icons-color;
+  padding: 0.5rem 1rem;
+  height: auto;
+  text-decoration: none;
+}
+
+.home-icon {
+  width: 1.25rem;
+  height: 0.7625rem;
+  padding-right: 0.5rem;
 }
