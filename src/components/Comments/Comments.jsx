@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./Comments.scss";
+import AddComments from "../AddComments/AddComments";
 
 const apiKey = "e0eea5f0-0f8c-4b54-9fc4-ff50843766d4";
 
@@ -35,6 +36,7 @@ function CommentsPage() {
 
   return (
     <div className="comment">
+      <AddComments fetchComments={fetchComments} />
       <h3 className="comment-count">{countDisplayedComments()} Comments</h3>
       <ul>
         {comments.map((comment) => (

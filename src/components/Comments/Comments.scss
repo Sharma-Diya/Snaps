@@ -6,12 +6,12 @@
 
   &-count {
     font-family: "Outfit-Light", sans-serif;
+    font-size: 1rem;
     padding: 1rem 0;
   }
-
   &-list {
     list-style: none;
-    border-top: 2px solid $border-color;
+    border-top: 0.125rem solid $border-color;
     padding: 1rem 0;
   }
   &-info {
@@ -20,8 +20,8 @@
     color: $icons-color;
 
     p {
-      font-size: 12px;
-      padding-bottom: 10px;
+      font-size: 0.75rem;
+      padding-bottom: 0.625rem;
     }
   }
 }

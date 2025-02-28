@@ -8,12 +8,11 @@
   padding-bottom: 0.625rem;
   border: 0.0625rem solid $border-color;
   overflow: hidden;
-  max-width: 31.25rem;
-  margin: 1.25rem auto;
+  min-width: 10rem;
   position: relative;
 
-  @include tablet {
-    margin: auto;
+  &__photo {
+    position: relative;
   }
 
   &__img {
@@ -26,8 +25,9 @@
   }
 
   &__photographer {
+    color: $text-color;
     position: absolute;
-    bottom: 3.2rem;
+    bottom: 0;
     right: 2rem;
     background: $alt-background-color;
     border-top-left-radius: 0.5rem;
@@ -48,8 +48,8 @@
     &--item {
       background: white;
       border: 0.0625rem solid $border-color;
-      padding: 0.375rem 0.5rem;
-      margin: 0.125rem 0.375rem;
+      padding: 0.375rem;
+      margin: 0.125rem;
       font-size: 0.75rem;
       border-radius: 0.625rem;
       font-weight: 500;
@@ -57,6 +57,10 @@
       cursor: pointer;
       transition: all 0.2s ease-in-out;
 
+      @include tablet{
+        padding: 0.375rem 0.5rem;
+        margin: 0.125rem 0.375rem;
+      }
       &:hover {
         background: $border-color;
       }

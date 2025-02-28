@@ -9,6 +9,11 @@
   @include tablet {
     padding-bottom: 4rem;
   }
+  @include desktop {
+    height: 263vh;
+    width: 24.5rem;
+    padding-bottom: 4rem;
+  }
 
   p {
     padding: 0.625rem 0;
