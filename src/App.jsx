@@ -2,7 +2,7 @@ import "./App.scss";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
-import SinglePhoto from "./pages/SinglePhoto/SinglePhoto";
+import SinglePhoto from "./pages/SinglePhotoPage/SinglePhotoPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";

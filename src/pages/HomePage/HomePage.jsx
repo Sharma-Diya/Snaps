@@ -1,4 +1,5 @@
 import React from "react";
+import "./HomePage.scss";
 import Header from "../../components/Header/Header";
 import SnapList from "../../components/SnapList/SnapList";
 import FilterList from "../../components/FilterList/FilterList";
