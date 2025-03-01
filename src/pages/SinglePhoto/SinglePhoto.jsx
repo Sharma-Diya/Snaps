@@ -6,6 +6,8 @@ import CommentsPage from "../../components/Comments/Comments";
 
 const apiKey = "e0eea5f0-0f8c-4b54-9fc4-ff50843766d4";
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
 function PhotoDetails() {
   const [photo, setPhoto] = useState(null);
   const params = useParams();
@@ -14,7 +16,7 @@ function PhotoDetails() {
     try {
       const [photoResponse] = await Promise.all([
         axios.get(
-          `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${params.id}?api_key=${apiKey}`
+          `${backendUrl}/photos/${params.id}`
         ),
       ]);
 
