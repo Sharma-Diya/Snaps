@@ -6,6 +6,9 @@ import AddComments from "../AddComments/AddComments";
 
 const apiKey = "e0eea5f0-0f8c-4b54-9fc4-ff50843766d4";
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
+
 function CommentsPage() {
   const [comments, setComments] = useState([]);
   const params = useParams();
@@ -13,7 +16,7 @@ function CommentsPage() {
   const fetchComments = async () => {
     try {
       const response = await axios.get(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${params.id}/comments?api_key=${apiKey}`
+        `${backendUrl}/photos/${params.id}/comments`
       );
       const sortCommentsArray = response.data
         .sort((a, b) => b.timestamp - a.timestamp)
