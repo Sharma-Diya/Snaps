@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import "./AddComments.scss";
 const apiKey = "e0eea5f0-0f8c-4b54-9fc4-ff50843766d4";
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
 function AddComments({ fetchComments }) {
   const { id } = useParams();
   const [commentName, setCommentName] = useState("");
@@ -23,7 +25,7 @@ function AddComments({ fetchComments }) {
 
     try {
       const response = await axios.post(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}/comments?api_key=${apiKey}`,
+        `${backendUrl}/photos/${id}/comments`,
         {
           name: commentName,
           comment: commentDescription,

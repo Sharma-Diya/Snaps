@@ -9,7 +9,7 @@
     display: flex;
     flex-wrap: wrap; 
     gap: 1.25rem;
-    justify-content: center; 
+    justify-content: space-around; 
 
     .photo-card {
       width: 100%;
@@ -19,7 +19,7 @@
       }
 
       @include desktop {
-        max-width: 32%;
+        max-width: 24.5rem;
       }
     }
   }
