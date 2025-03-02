@@ -3,8 +3,6 @@ import "./SnapList.scss";
 import SnapItem from "../SnapItem/SnapItem";
 import axios from "axios";
 
-const apiKey = "e0eea5f0-0f8c-4b54-9fc4-ff50843766d4";
-
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 function SnapList({ selectedTag, setSelectedTag }) {

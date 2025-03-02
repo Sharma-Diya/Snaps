@@ -9,17 +9,19 @@
     display: flex;
     flex-wrap: wrap; 
     gap: 1.25rem;
-    justify-content: space-around; 
+    justify-content: flex-start; 
 
     .photo-card {
-      width: 100%;
+      flex: 1 1 100%;
+
 
       @include tablet {
-        max-width: 48%;
+        flex: 1 1 44%;
+
       }
 
       @include desktop {
-        max-width: 24.5rem;
+        flex: 1 1 32%;
       }
     }
   }
