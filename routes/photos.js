@@ -1,7 +1,6 @@
 import fs from 'fs';
 import { v4 as uuidv4 } from 'uuid';
 import express from "express";
-// import { timeStamp } from 'console';
 
 const router = express.Router();
 
@@ -52,8 +51,5 @@ router.post('/:id/comments', (req, res) => {
   fs.writeFileSync("./data/photos.json", JSON.stringify(photosData, null, 2));
   res.status(201).json(photo.comments);
 });
-
-// Define the file path for photos data
-// const photosDataFile = './data/photos.json';
 
 export default router;
