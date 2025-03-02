@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { v4 as uuidv4 } from 'uuid';
 import express from "express";
-import { timeStamp } from 'console';
+// import { timeStamp } from 'console';
 
 const router = express.Router();
 
@@ -30,7 +30,7 @@ router.get('/:id/comments', (req, res) => {
   const { id } = req.params;
   const photo = photosData.find((photo) => photo.id === id);
   if (photo) {
-    res.json(photo.comments);
+    res.json(photo.comments || []);
   } else {
     res.status(404).send('Photo not found');
   }
@@ -46,33 +46,14 @@ router.post('/:id/comments', (req, res) => {
     id: uuidv4(),
     name,
     comment,
-    timeStamp: Date.now() 
+    timestamp: Date.now() 
   }
   photo.comments.push(newComment);
-  fs.writeFileSync("./data/photos.json", JSON.stringify(photo, null, 2));
-  res.json(newComment);
-
-  // if (newComment) {
-  //   savePhotoData(photos);
-  //   res.status(201).json(newComment);
-  // } else {
-  //   res.status(404).send('Photo not found');
-  // }
+  fs.writeFileSync("./data/photos.json", JSON.stringify(photosData, null, 2));
+  res.status(201).json(photo.comments);
 });
 
-
 // Define the file path for photos data
-const photosDataFile = './data/photos.json';
-
-// Function to load photos from the photos.json file
-// export const loadPhotos = () => {
-//   try {
-//     const data = fs.readFileSync(photosDataFile, 'utf-8');
-//     return JSON.parse(data); // Return parsed photos data
-//   } catch (err) {
-//     console.error('Error reading photos data:', err);
-//     return []; // Return an empty array if there's an error reading the file
-//   }
-// };
+// const photosDataFile = './data/photos.json';
 
 export default router;
