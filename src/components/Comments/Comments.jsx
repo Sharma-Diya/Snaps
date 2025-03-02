@@ -4,10 +4,7 @@ import { useParams } from "react-router-dom";
 import "./Comments.scss";
 import AddComments from "../AddComments/AddComments";
 
-const apiKey = "e0eea5f0-0f8c-4b54-9fc4-ff50843766d4";
-
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
-
 
 function CommentsPage() {
   const [comments, setComments] = useState([]);
@@ -18,10 +15,10 @@ function CommentsPage() {
       const response = await axios.get(
         `${backendUrl}/photos/${params.id}/comments`
       );
-  
+
       const sortedComments = response.data
-        .sort((a, b) => b.timestamp - a.timestamp)  
-        .slice(0, 3); 
+        .sort((a, b) => b.timestamp - a.timestamp)
+        .slice(0, 3);
       setComments(sortedComments);
     } catch (error) {
       console.error("Error fetching comments:", error);
