@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./HomePage.scss";
 import Header from "../../components/Header/Header";
 import SnapList from "../../components/SnapList/SnapList";
 import FilterList from "../../components/FilterList/FilterList";
-function HomePage({
-  displayTags,
-  handleDisplayTags,
-  handleTagClick,
-  selectedTag,
-}) {
+function HomePage() {
+
+  const [displayTags, setDisplayTags] = useState(false);
+  const [selectedTag, setSelectedTag] = useState("");
+
+  function handleDisplayTags() {
+    setDisplayTags(!displayTags);
+  }
+
+  function handleTagClick(clickedTag) {
+    setSelectedTag((prevTag) => (prevTag === clickedTag ? "" : clickedTag));
+  }
   return (
     <>
       <Header
