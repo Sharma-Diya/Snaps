@@ -18,10 +18,6 @@
         "comment": "What a great angle! It really gives a new perspective on this location.",
         "id": "f3aa5dd5-4c75-4a74-a410-c59d56d04697",
         "timestamp": 1724612264000
-      },
-      {
-        "id": "204e4079-7ca8-4359-8729-c7c8a3754ad2",
-        "timestamp": "2025-02-28T09:00:29.106Z"
       }
     ]
   },
@@ -49,7 +45,6 @@
   {
     "id": "c8ffcfd1-1ff1-4114-bbf1-a023c4a24f9d",
     "photo": "http://localhost:3000/photos/Photo-02.png",
-
     "photoDescription": "Aerial view of city buildings in New York City, New York.",
     "photographer": "Malik Johnson",
     "likes": 1685,
@@ -83,7 +78,6 @@
   {
     "id": "8cbf5a70-6cb8-4cce-a4c2-4cde4f84c513",
     "photo": "http://localhost:3000/photos/Photo-03.png",
-
     "photoDescription": "A bare tree in front of the Nancy and Rich Kinder Building at the Museum of Fine Arts Houston.",
     "photographer": "Elena Rossi",
     "likes": 2362,
@@ -117,7 +111,6 @@
   {
     "id": "37c67839-4608-4994-8ab6-ef9ad609df70",
     "photo": "http://localhost:3000/photos/Photo-04.png",
-
     "photoDescription": "A view of the Crystal Bridges Museum of American Art from across the water.",
     "photographer": "Amara Okoye",
     "likes": 2667,
@@ -139,7 +132,6 @@
   {
     "id": "9d8e239c-3953-4822-83f2-ccdd98b8c5e6",
     "photo": "http://localhost:3000/photos/Photo-05.png",
-
     "photoDescription": "A train traveling through Chicago, Illinois next to tall buildings.",
     "photographer": "Ali Novak-Greene",
     "likes": 1048,
@@ -174,7 +166,6 @@
   {
     "id": "238117b8-6c3b-4f0d-b1c3-97e232980e62",
     "photo": "http://localhost:3000/photos/Photo-06.png",
-
     "photoDescription": "Green trees beside the brown building of Ringling Museum in Sarasota, Florida during daytime.",
     "photographer": "Sofia Alvarez",
     "likes": 2600,
@@ -201,7 +192,6 @@
   {
     "id": "89eff543-8ecf-4a64-abbc-495b6443be6f",
     "photo": "http://localhost:3000/photos/Photo-07.png",
-
     "photoDescription": "A view of the front of the Smithsonian Castle when arriving from The National Mall.",
     "photographer": "Dariya Menon",
     "likes": 1225,
@@ -215,7 +205,6 @@
   {
     "id": "7cf76704-9508-4632-8077-caec02d1929e",
     "photo": "http://localhost:3000/photos/Photo-08.png",
-
     "photoDescription": "White concrete building nested in the Bayou Ben Collection and Gardens, a facility of the Museum of Fine Arts.",
     "photographer": "Nico Pascucci",
     "likes": 360,
@@ -237,7 +226,6 @@
   {
     "id": "beffcc61-7d93-47f7-9938-5f0df5ef3bea",
     "photo": "http://localhost:3000/photos/Photo-09.png",
-
     "photoDescription": "A group of people walking across Brooklyn Bridge in Brooklyn, New York.",
     "photographer": "Wei Zhang",
     "likes": 1192,
