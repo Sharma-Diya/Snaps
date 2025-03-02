@@ -18,14 +18,13 @@ function CommentsPage() {
       const response = await axios.get(
         `${backendUrl}/photos/${params.id}/comments`
       );
-      const sortCommentsArray = response.data
-        .sort((a, b) => b.timestamp - a.timestamp)
-        .slice(0, 3);
-
-      setComments(sortCommentsArray);
-      console.log(response.data);
+  
+      const sortedComments = response.data
+        .sort((a, b) => b.timestamp - a.timestamp)  
+        .slice(0, 3); 
+      setComments(sortedComments);
     } catch (error) {
-      console.error("Error fetching photo:", error);
+      console.error("Error fetching comments:", error);
     }
   };
 
@@ -35,12 +34,12 @@ function CommentsPage() {
     }
   }, [params.id]);
 
-  const countDisplayedComments = () => comments.length;
+  const commentsCount = () => comments.length;
 
   return (
     <div className="comment">
       <AddComments fetchComments={fetchComments} />
-      <h3 className="comment-count">{countDisplayedComments()} Comments</h3>
+      <h3 className="comment-count">{commentsCount()} Comments</h3>
       <ul>
         {comments.map((comment) => (
           <li className="comment-list" key={comment.id}>
