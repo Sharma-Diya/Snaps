@@ -20,7 +20,7 @@
     padding: 0.625rem;
     margin-bottom: 0.9375rem;
     border: 0.125rem solid $border-color; // Default State (Sea Green)
-
+    font-family: "Outfit-Light", sans-serif;
     border-radius: 0.625rem;
     font-size: 0.875rem;
     background-color: #ffffff;
@@ -54,6 +54,12 @@
     display: block;
     align-self: flex-end;
     font-weight: 400;
+    font-family: "Outfit-Light", sans-serif;
   }
 }
 
+.error-message {
+  color: #b10606;
+  font-size: 14px;
+  margin-top: 10px;
+}

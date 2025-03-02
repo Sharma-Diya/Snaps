@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import "./Comments.scss";
 import AddComments from "../AddComments/AddComments";
 
-const apiKey = "e0eea5f0-0f8c-4b54-9fc4-ff50843766d4";
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 function CommentsPage() {
   const [comments, setComments] = useState([]);
@@ -13,16 +13,15 @@ function CommentsPage() {
   const fetchComments = async () => {
     try {
       const response = await axios.get(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${params.id}/comments?api_key=${apiKey}`
+        `${backendUrl}/photos/${params.id}/comments`
       );
-      const sortCommentsArray = response.data
+
+      const sortedComments = response.data
         .sort((a, b) => b.timestamp - a.timestamp)
         .slice(0, 3);
-
-      setComments(sortCommentsArray);
-      console.log(response.data);
+      setComments(sortedComments);
     } catch (error) {
-      console.error("Error fetching photo:", error);
+      console.error("Error fetching comments:", error);
     }
   };
 
@@ -32,12 +31,12 @@ function CommentsPage() {
     }
   }, [params.id]);
 
-  const countDisplayedComments = () => comments.length;
+  const commentsCount = () => comments.length;
 
   return (
     <div className="comment">
       <AddComments fetchComments={fetchComments} />
-      <h3 className="comment-count">{countDisplayedComments()} Comments</h3>
+      <h3 className="comment-count">{commentsCount()} Comments</h3>
       <ul>
         {comments.map((comment) => (
           <li className="comment-list" key={comment.id}>

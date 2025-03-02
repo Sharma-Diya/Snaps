@@ -9,19 +9,32 @@ function Footer() {
 
       <div className="footer-info">
         <div className="footer-info__label">
-          <h3>For photographers</h3>
-          <h3>Hire talent</h3>
-          <h3>Inspiration</h3>
+        <a href="/for-photographers">
+            <h3>For photographers</h3>
+          </a>
+          <a href="/hire-talent">
+            <h3>Hire talent</h3>
+          </a>
+          <a href="/inspiration">
+            <h3>Inspiration</h3>
+          </a>
         </div>
 
         <div className="footer-info__content">
-          <h3>About</h3>
-          <h3>Careers</h3>
-          <h3>Support</h3>
+        <a href="/about">
+            <h3>About</h3>
+          </a>
+          <a href="/careers">
+            <h3>Careers</h3>
+          </a>
+          <a href="/support">
+            <h3>Support</h3>
+          </a>
         </div>
       </div>
 
       <div className="footer-icons">
+      <a href="https://facebook.com">      
         <svg
           className="footer-icons__fb"
           viewBox="0 0 24 24"
@@ -32,6 +45,8 @@ function Footer() {
             fill="#1E6655"
           />
         </svg>
+      </a>
+      <a href="https://twitter.com">      
         <svg
           className="footer-icons__twitter"
           viewBox="0 0 20 20"
@@ -42,6 +57,8 @@ function Footer() {
             fill="#1E6655"
           />
         </svg>
+       </a>
+       <a href="https://instagram.com" >
         <svg
           className="footer-icons__insta"
           viewBox="0 0 24 24"
@@ -52,6 +69,8 @@ function Footer() {
             fill="#1E6655"
           />
         </svg>
+        </a>
+        <a href="https://pinterest.com">
         <svg
           className="footer-icons__pinterest"
           viewBox="0 0 24 24"
@@ -62,6 +81,7 @@ function Footer() {
             fill="#1E6655"
           />
         </svg>
+        </a>
       </div>
 
       <div className="footer-bottom">

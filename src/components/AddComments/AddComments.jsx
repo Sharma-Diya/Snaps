@@ -2,7 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import "./AddComments.scss";
-const apiKey = "e0eea5f0-0f8c-4b54-9fc4-ff50843766d4";
+
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 function AddComments({ fetchComments }) {
   const { id } = useParams();
@@ -12,28 +13,20 @@ function AddComments({ fetchComments }) {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log("added");
-
     if (!commentName || !commentDescription) {
-      setError(true);
-      alert("Please fill out both fields before submitting.");
+      setError("Please fill out both fields before submitting.");
       return;
     }
-    setError(false);
+    setError("");
 
     try {
-      const response = await axios.post(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}/comments?api_key=${apiKey}`,
-        {
-          name: commentName,
-          comment: commentDescription,
-        }
-      );
+       await axios.post(`${backendUrl}/photos/${id}/comments`, {
+        name: commentName,
+        comment: commentDescription,
+      });
       fetchComments();
       setCommentName("");
       setCommentDescription("");
-
-      console.log("Comment added:", response.data);
     } catch (error) {
       console.error("Error adding comment:", error);
     }
@@ -65,6 +58,8 @@ function AddComments({ fetchComments }) {
             if (error) setError(false);
           }}
         ></textarea>
+
+        {error && <p className="error-message">{error}</p>}
 
         <button className="comment-form__button" type="submit">
           Submit

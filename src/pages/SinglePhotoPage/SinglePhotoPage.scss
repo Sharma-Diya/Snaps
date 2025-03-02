@@ -1,0 +1,8 @@
+@use "/src/styles/partials/variables" as *;
+@use "/src/styles/partials/mixins" as *;
+
+.snap {
+  @include desktop {
+    padding: 0 12rem;
+  }
+}
